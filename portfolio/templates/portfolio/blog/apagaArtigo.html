@@ -1,0 +1,18 @@
+{% extends 'portfolio/base.html' %}
+
+
+
+{% block main %}
+
+        <section class="apagaForm">
+            <h2 id="titulo3">Apagar Artigo?</h2>
+            <h2 id="titulo3">  {{ artigo.titulo }}</h2>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-warning btn-sm">Apagar</button>
+            </form>
+
+
+        </section>
+
+{% endblock %}

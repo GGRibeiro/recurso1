@@ -1,0 +1,13 @@
+
+{% extends 'portfolio/base.html' %}
+
+
+
+{% block main %}
+    <h2>Apagar Comentario</h2>
+    <p>  apagar o Comentario? "{{ comentario.titulo }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Apagar</button>
+    </form>
+{% endblock %}

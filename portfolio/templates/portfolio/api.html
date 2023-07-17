@@ -1,0 +1,35 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block main %}
+
+
+    <div class="containerApi">
+        <form class="formApi" method="POST">
+            {% csrf_token %}
+            <input type="text" placeholder="digite a cidade" name="city">
+            <button class="btnApi" type="submit">Enter</button>
+        </form>
+
+        <div class="clima">
+            <div class="ladoEsq">
+                <h2>{{ temp }} &deg;</h2>
+                <h3>{{ city }}</h3>
+            </div>
+
+            <div class="ladoDir">
+                <div class="iconeApi">
+                    <p><img src="https://api.openweathermap.org/img/w/{{ icon }}" width="100px"></p>
+                </div>
+
+                <div class="condicao">
+                    <h2>{{ description }}</h2>
+                    <h3> {{ day }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+

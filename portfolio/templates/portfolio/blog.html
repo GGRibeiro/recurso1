@@ -1,0 +1,38 @@
+{% extends 'portfolio/base.html' %}
+
+{% block main %}
+    <div>
+        <h1 id="titulo3">Bem vindo ao Meu blog</h1>
+        <h3 id="titulo3">Aqui estão alguns tópicos que acho interessantes</h3>
+        <h4 id="titulo3">Fique à vontade para comentar sobre os artigos</h4>
+    </div>
+    <div class="botao">
+        <a href="{% url 'portfolio:criaArtigo' %}" class="btn btn-danger btn-sm">+ Novo Artigo</a>
+    </div>
+    <div class="artigo">
+        {% for tarefa in tarefas %}
+            <p class="artigoCard">{{ tarefa.titulo }}</p>
+            <div class="botao">
+                <a href="{% url 'portfolio:apagaArtigo' tarefa.id %}" class="btn btn-danger btn-sm">Apagar</a>
+            </div>
+        {% empty %}
+            <p>No tarefas available.</p>
+        {% endfor %}
+
+    </div>
+
+        <a href="{% url 'portfolio:novoComentario' %}" class="btn btn-warning btn-sm">Novo Comentario</a>
+
+        {% for comentario in comentarios %}
+            <p>{{ comentario.nome }}</p>
+            <p>{{ comentario.cidade }}</p>
+            <p>{{ comentario.pais }}</p>
+            <p>{{ comentario.data }}</p>
+            <p>{{ comentario.titulo }}</p>
+            <p>{{ comentario.comentario }}</p>
+        {% endfor %}
+
+
+
+
+{% endblock %}

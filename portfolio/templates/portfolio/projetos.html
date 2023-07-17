@@ -1,0 +1,33 @@
+{% extends 'portfolio/base.html' %}
+
+{% block main %}
+    <container class="projectsContainer">
+        <div class="cardsWrapper">
+            <div class="projCard">
+                <h2 id="titulo2">Arduino + LoadCell </h2>
+                <img class="imgCard"
+                     src="https://i.pinimg.com/564x/e7/d5/e7/e7d5e7576da6dd1c887fc4ca0d2ff566.jpg">
+                <p id="paragrafo"> projeto construído em c++ com um buffer rotativo que utiliza
+                    as ultimas 25 posições convertido
+                    em uma regra de tres para dar o valor em "gramas"</p>
+            </div>
+
+            <div class="projCard">
+                <h1 id="titulo2">Fingerprint Sensor </h1>
+                <img class="imgCard"
+                     src="https://content.instructables.com/FIB/3HVP/J34PQ0R2/FIB3HVPJ34PQ0R2.jpg?auto=webp&frame=1&width=1024&fit=bounds&md=51136ee4aab9c673da68e8ab983876d7">
+                <p id="paragrafo"> projeto final desenvolvido na disciplina de Arquiteteura avançada de computadores,
+                    programado em c++ com arduino, recebe input do sensor e apresenta no ecrã </p>
+            </div>
+
+            <div class="projCard">
+                <h2 id="titulo2">Display Touch</h2>
+                <img class="imgCard"
+                     src="https://hackster.imgix.net/uploads/attachments/316759/dsc06883(normalized)edited_maKVOwmaUe.JPG?auto=compress%2Cformat&w=900&h=675&fit=min">
+                <p id="paragrafo"> Display touch ili9341, ligado a um arduino com resistores de tensao de 3kΩ.
+                    Foi utilizado as bibliotecas Adafruit na linguagem c++, e configurado os eixos X e Y que possibilita
+                    desenhos</p>
+            </div>
+        </div>
+    </container>
+{% endblock %}

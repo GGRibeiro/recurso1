@@ -1,0 +1,49 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}">
+
+
+{% block main %}
+
+
+    <div class="wrapper">
+        <div class="titulo3wrapper">
+
+
+        </div>
+        <div class="divProj2">
+
+
+            <article class="primeiro">
+                <b><h3>Objetivos Do Portfólio</h3></b>
+
+                <p>O projeto foi desenvolvido usando o framework Django em Python.
+                    Ele tem como objetivo principal criar um site de portfólio que permite aos usuários criar e
+                    gerenciar artigos e visualizar informações sobre o clima usando uma API externa.</p>
+
+                    <p>O projeto envolve o uso de várias partes e funcionalidades. Inicialmente, é definido um modelo
+                    chamado
+                    "Comentario" que armazena informações sobre os comentários dos usuários,
+                    como nome, cidade, país, data, título e o próprio comentário. O modelo é implementado usando o
+                        Django ORM (Object-Relational Mapping).</p>
+
+                    <p>Em seguida, são criados templates HTML usando a linguagem de modelagem Django.
+                    Esses templates são estendidos de um arquivo de base HTML e contêm blocos que são preenchidos com
+                    conteúdo específico de cada página.
+                    Um exemplo disso é o template "criaArtigo.html", que renderiza um formulário para criar um novo
+                        artigo.</p>
+
+                    <p>Há tambem uma função de visualização chamada "indexApi_View" que utiliza a biblioteca requests
+                    para fazer uma chamada a uma API de clima externa. Os dados retornados pela API são processados e
+                        exibidos em um template </p>
+                        <b><h3>Conclusão</h3></b>
+                    <p>O projeto tem como objetivo fornecer um aplicativo web interativo de portfólio, permitindo aos
+                    usuários criar artigos, visualizar informações climáticas e excluir artigos existentes. A estrutura
+                    de diretórios do projeto segue as práticas do Django para organização
+                    de arquivos, como modelos, migrações, arquivos estáticos e templates.</p>
+            </article>
+        </div>
+    </div>
+
+
+{% endblock %}

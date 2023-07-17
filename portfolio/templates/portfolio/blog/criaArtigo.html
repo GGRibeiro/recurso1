@@ -1,0 +1,14 @@
+{% extends 'portfolio/base.html' %}
+{% block main %}
+
+    <div class="card">
+        <h2 id="titulo3">Criar Artigo</h2>
+        <form method="Post" action="">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Gravar">
+        </form>
+    </div>
+{% endblock %}
+
+

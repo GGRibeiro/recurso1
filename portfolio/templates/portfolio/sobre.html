@@ -1,0 +1,180 @@
+{% extends 'portfolio/base.html' %}
+
+{% block main %}
+
+
+    <section class="sobreMim">
+        <h2 id="titulo2">Licenciatura</h2>
+        <p id="paragrafo">Universidade Lusófona de Humanas e técnologias</p>
+        <p id="paragrafo">Engenharia de Informática </p>
+
+        <h2 id="titulo2">Cadeiras</h2>
+    <a href="cadastraSemestre.html">
+        <button  class="btn btn-warning btn-sm">Atualizar conteúdos</button>
+    </a>
+        <table id="table1sem">
+        </table>
+
+        <div id="sem1">
+            <table>
+                <tr>
+                    <th>1 Semestre</th>
+                    <th>ects</th>
+                    <th>estrelas</th>
+                    <th>professoreaaas</th>
+                </tr>
+
+                {% for semestres in semestre1 %}
+                    <tr>
+                        <td>{{ semestres.nome }}</td>
+                        <td>{{ semestres.ects }}</td>
+                        <td>{{ semestres.estrelas }}</td>
+                        <td>{{ semestres.professores }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+        <div id="sem2">
+            <table>
+                <tr>
+                    <th>2 Semestre</th>
+                    <th>ects</th>
+                    <th>estrelas</th>
+                    <th>professores</th>
+                </tr>
+                {% for semestres in semestre2 %}
+                    <tr>
+                        <td>{{ semestres.nome }}</td>
+                        <td>{{ semestres.ects }}</td>
+                        <td>{{ semestres.estrelas }}</td>
+                        <td>{{ semestres.professores }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+
+        <div id="sem3">
+            <table>
+                <tr>
+                    <th>3 Semestre</th>
+                    <th>ects</th>
+                    <th>estrelas</th>
+                    <th>professores</th>
+                </tr>
+                {% for semestres in semestre3 %}
+                    <tr>
+                        <td>{{ semestres.nome }}</td>
+                        <td>{{ semestres.ects }}</td>
+                        <td>{{ semestres.estrelas }}</td>
+                        <td>{{ semestres.professores }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+
+        <div id="sem4">
+            <table>
+                <tr>
+                    <th>4 Semestre</th>
+                    <th>ects</th>
+                    <th>estrelas</th>
+                    <th>professores</th>
+                </tr>
+                {% for semestres in semestre4 %}
+                    <tr>
+                        <td>{{ semestres.nome }}</td>
+                        <td>{{ semestres.ects }}</td>
+                        <td>{{ semestres.estrelas }}</td>
+                        <td>{{ semestres.professores }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+
+         <div id="sem5">
+             <table>
+                 <tr>
+                     <th>5 Semestre</th>
+                     <th>ects</th>
+                     <th>estrelas</th>
+                     <th>professores</th>
+                 </tr>
+                 {% for semestres in semestre5 %}
+                     <tr>
+                         <td>{{ semestres.nome }}</td>
+                         <td>{{ semestres.ects }}</td>
+                         <td>{{ semestres.estrelas }}</td>
+                         <td>{{ semestres.professores }}</td>
+                     </tr>
+                 {% endfor %}
+             </table>
+         </div>
+
+
+        <div id="sem6">
+            <table>
+                <tr>
+                    <th>6 Semestre</th>
+                    <th>ects</th>
+                    <th>estrelas</th>
+                    <th>professores</th>
+                </tr>
+                {% for semestres in semestre6 %}
+                    <tr>
+                        <td>{{ semestres.nome }}</td>
+                        <td>{{ semestres.ects }}</td>
+                        <td>{{ semestres.estrelas }}</td>
+                        <td>{{ semestres.professores }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+
+        <h2 id="titulo2">Educação</h2>
+        <p id="paragrafo">Nome da escola e período de estudo</p>
+
+        <h2 id="titulo2">Aptidões e competências</h2>
+
+
+        <div class="skills">
+            <h3 id="titulo3">Técnicas</h3>
+            <p id="paragrafo">Aptidão 1</p>
+            <h3 id="titulo3">Organizativas</h3>
+            <p id="paragrafo">Aptidão 1</p>
+            <h3 id="titulo3">Sociais</h3>
+                <p id="paragrafo">Aptidão 1</p>
+            <h3 id="titulo3">Linguísticas</h3>
+                <p id="paragrafo">Aptidão 1</p>
+        </div>
+
+
+
+        <div class="sobreMim">
+            <h2 id="titulo2">Interesses e hobbies</h2>
+            <p id="paragrafo">Interesse ou hobby 1</p>
+        </div>
+
+
+        <div class="experienciaProf">
+            <h2 id="titulo2">Experiência profissional</h2>
+            <div class="trabalho">
+            <h3 id="titulo3">Nome da empresa</h3>
+            <p id="paragrafo">Período de trabalho</p>
+            <p id="paragrafo">Descrição das atividades realizadas</p>
+            </div>
+            <p id="paragrafo">Período de trabalho</p>
+            <p id="paragrafo">Descrição das atividades realizadas</p>
+        </div>
+</section>
+
+
+
+
+
+
+{% endblock %}

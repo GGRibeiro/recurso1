@@ -1,0 +1,15 @@
+{% extends 'portfolio/base.html' %}
+
+{% block main %}
+    {% if request.user.is_authenticated %}
+        <div class="card">
+            <form class="cardSemestre" method="POST" action="">
+                <h2 id="titulo3">informaçoes do semestre</h2>
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Gravar">
+            </form>
+        </div>
+    {% endif %}
+
+{% endblock %}
