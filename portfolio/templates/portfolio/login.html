@@ -5,13 +5,14 @@
 
 {% block main %}
     {% if not request.user.is_authenticated %}
-       {{ message }}
+        {{ message }}
     {% endif %}
-
-    <form action="{% url 'portfolio:login' %}" method="POST">
-        {% csrf_token %}
-        <input type="text" name="username" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit">
-    </form>
+    <div class="card">
+        <form action="{% url 'portfolio:login' %}" method="POST">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <input type="submit">
+        </form>
+    </div>
 {% endblock %}

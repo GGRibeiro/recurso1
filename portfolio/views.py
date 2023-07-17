@@ -136,7 +136,7 @@ def cadastraSemestre(request):
     context = {'form': form}
     return render(request, 'portfolio/cadastraSemestre.html', context)
 
-@login_required
+
 def render_semestre_view(request):
     semestre1 = Semestre.objects.filter(semestre=1)
     semestre2 = Semestre.objects.filter(semestre=2)
@@ -157,7 +157,7 @@ def render_semestre_view(request):
     return render(request, 'portfolio/sobre.html', context)
 
 
-@login_required
+
 def indexApi_View(request):
 
     if 'city' in request.POST:
@@ -173,25 +173,3 @@ def indexApi_View(request):
     temp = res['main']['temp']
     day=datetime.date.today()
     return render(request, 'portfolio/api.html', {'description': description, 'icon': icon, 'temp': temp,'day': day, 'city':city})
-
-
-@login_required
-def add_passenger_view(request, flight_id):
-    flight = Flight.objects.get(id=flight_id)
-
-    if request.method == 'POST':
-        passenger = Passenger.objects.get(id=request.POST['passenger'])
-        flight.passengers.add(passenger)
-
-    return redirect('portifolio:flight', flight_id=flight_id)
-
-
-@login_required
-def remove_passenger_view(request, flight_id, passenger_id):
-    flight = Flight.objects.get(id=flight_id)
-    passenger = Passenger.objects.get(id=passenger_id)
-
-    flight.passengers.remove(passenger)
-
-    return redirect('portifolio:flights', flight_id=flight_id)
-

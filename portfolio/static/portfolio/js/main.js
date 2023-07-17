@@ -72,6 +72,8 @@ function exibeTexto() {
 }
 
 
-
-
+window.addEventListener('DOMContentLoaded', function() {
+    var meuVideo = document.getElementById('meuVideo');
+    meuVideo.play();
+  });
 
