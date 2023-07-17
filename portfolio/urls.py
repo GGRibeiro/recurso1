@@ -8,7 +8,7 @@ app_name = 'portfolio'
 
 urlpatterns = [
     path('base/', views.base_view, name='base'),
-    path('home/', views.home_view, name='home'),
+    path('', views.home_view, name='home'),
     path('contacto/', views.contacto_view, name='contacto'),
     path('projetos/', views.projetos_view, name='projetos'),
     path('sobre/', views.render_semestre_view, name='sobre'),
